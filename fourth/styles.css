@@ -1,0 +1,175 @@
+/* portfolio-detail.css */
+
+/* 전역 스타일 */
+body {
+  background-color: #f8f9fa; /* 매우 밝은 회색 배경 */
+  color: #212529; /* 어두운 회색 텍스트 */
+  font-family: "Inter", sans-serif; /* Inter 폰트 적용 */
+  line-height: 1.6;
+  scroll-behavior: smooth; /* 부드러운 스크롤 */
+}
+
+/* 섹션 공통 스타일 */
+section {
+  padding: 80px 0; /* 상하 패딩 */
+  min-height: 100vh; /* 최소 높이 설정 */
+  display: flex;
+  align-items: flex-start; /* 상단 정렬 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  background-color: #f8f9fa; /* 기본 배경색 */
+}
+
+/* 컨테이너 및 카드 스타일 */
+.container {
+  max-width: 960px; /* 상세 페이지 컨테이너 너비 조정 */
+  margin-top: 50px; /* 네비게이션 아래로 여백 */
+  margin-bottom: 50px; /* 푸터 위로 여백 */
+  padding: 0 15px;
+}
+
+.rounded-lg {
+  border-radius: 1rem !important; /* 더 둥근 모서리 */
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important; /* 더 부드러운 그림자 */
+}
+
+/* 네비게이션 바 */
+.navbar {
+  background-color: #fff !important; /* 네비게이션 바 배경 */
+  border-bottom: 1px solid #dee2e6; /* 하단 테두리 */
+}
+
+.navbar-brand {
+  color: #212529 !important; /* 브랜드 이름 색상 */
+  font-size: 1.8rem;
+}
+
+.navbar-nav .nav-link {
+  color: #6c757d !important; /* 네비게이션 링크 색상 */
+  font-weight: 600;
+  transition: all 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #212529 !important; /* 호버 시 어두운 색 */
+  background-color: #e9ecef; /* 호버 시 배경색 */
+  border-radius: 0.5rem;
+}
+
+/* 프로젝트 아이템 스타일 */
+.project-item {
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+}
+
+.project-item:last-child {
+  border-bottom: none !important; /* 마지막 프로젝트는 하단 테두리 없음 */
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.project-item h3 {
+  color: #212529;
+  font-size: 2.2rem;
+}
+
+.project-item p.lead {
+  color: #495057;
+  font-size: 1.1rem;
+}
+
+.project-item h4 {
+  color: #212529;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.project-item ul {
+  margin-top: 1rem;
+  padding-left: 1.25rem; /* 목록 들여쓰기 */
+}
+
+.project-item ul li {
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+.project-item .badge {
+  font-size: 0.9rem;
+  padding: 0.5em 0.8em;
+  border-radius: 0.3rem;
+}
+
+.project-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 400px; /* 이미지 최대 높이 제한 */
+}
+
+/* 버튼 스타일 */
+.btn-dark {
+  background-color: #212529;
+  border-color: #212529;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.btn-dark:hover {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+}
+
+.btn-outline-dark {
+  color: #212529;
+  border-color: #212529;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-dark:hover {
+  background-color: #212529;
+  color: #fff;
+  border-color: #212529;
+}
+
+/* 푸터 */
+footer {
+  background-color: #fff !important;
+  border-top: 1px solid #dee2e6;
+}
+
+footer p {
+  margin-bottom: 0;
+  color: #6c757d;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  section {
+    padding: 40px 0;
+  }
+
+  .project-item h3 {
+    font-size: 1.8rem;
+  }
+
+  .project-item p.lead {
+    font-size: 1rem;
+  }
+
+  .project-item h4 {
+    font-size: 1.3rem;
+  }
+
+  .project-item .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-item .d-flex {
+    flex-direction: column;
+  }
+}
