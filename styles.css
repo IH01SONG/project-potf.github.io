@@ -1,0 +1,23 @@
+/* styles.css */
+
+body.bg-ivory {
+  background-color: #f6f3e7; /* soft ivory */
+}
+
+.text-dark-green {
+  color: #014421; /* deep dark green */
+}
+
+.bg-dark-green {
+  background-color: #014421 !important;
+}
+
+.btn-dark-green {
+  background-color: #014421;
+  border-color: #014421;
+}
+
+.btn-dark-green:hover {
+  background-color: #012d18;
+  border-color: #012d18;
+}
