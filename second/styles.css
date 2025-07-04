@@ -1,0 +1,215 @@
+/* style.css */
+
+/* 전역 스타일 */
+body {
+  background-color: #000; /* 완전한 검정색 배경 */
+  color: #fff; /* 흰색 텍스트 */
+  font-family: "Inter", sans-serif; /* Inter 폰트 적용 */
+  line-height: 1.6;
+  scroll-behavior: smooth; /* 부드러운 스크롤 */
+}
+
+/* 섹션 공통 스타일 */
+section {
+  padding: 80px 0; /* 상하 패딩 */
+  min-height: 100vh; /* 최소 높이 설정 */
+  display: flex;
+  align-items: center; /* 수직 중앙 정렬 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  background-color: #000; /* 기본 배경색 */
+}
+
+section:nth-of-type(even) {
+  background-color: #0d0d0d; /* 짝수 섹션은 약간 더 밝은 검정색 */
+}
+
+/* 컨테이너 및 카드 스타일 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.rounded-lg {
+  border-radius: 1rem !important; /* 더 둥근 모서리 */
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important; /* 더 강한 그림자 */
+}
+
+/* 네비게이션 바 */
+.navbar {
+  background-color: #000 !important; /* 네비게이션 바 배경 */
+  border-bottom: 1px solid #333; /* 하단 테두리 */
+}
+
+.navbar-brand {
+  color: #fff !important; /* 브랜드 이름 색상 */
+  font-size: 1.8rem;
+}
+
+.navbar-nav .nav-link {
+  color: #ccc !important; /* 네비게이션 링크 색상 */
+  font-weight: 600;
+  transition: all 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #fff !important; /* 호버 시 흰색 */
+  background-color: #333; /* 호버 시 배경색 */
+  border-radius: 0.5rem;
+}
+
+/* 히어로 섹션 */
+#home .container {
+  background-color: #1a1a1a; /* 히어로 섹션 컨테이너 배경 */
+  border: 1px solid #333; /* 테두리 */
+  padding: 60px;
+}
+
+#home h1 {
+  font-size: 3.5rem;
+  color: #fff;
+}
+
+#home .lead {
+  color: #ccc;
+}
+
+.btn-outline-light {
+  color: #fff;
+  border-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #fff;
+}
+
+/* 자기소개 섹션 */
+#about .container {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+}
+
+#about h2 {
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+#about img {
+  border: 3px solid #fff; /* 프로필 이미지 테두리 */
+}
+
+#about p {
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+/* 기술 스택 섹션 */
+#skills .container {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+}
+
+#skills h2 {
+  color: #fff;
+}
+
+.skill-card {
+  background-color: #222; /* 스킬 카드 배경 */
+  border: 1px solid #444; /* 스킬 카드 테두리 */
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.skill-card:hover {
+  background-color: #fff; /* 호버 시 흰색 배경 */
+  color: #000; /* 호버 시 검정색 텍스트 */
+  border-color: #fff;
+  transform: translateY(-5px); /* 약간 위로 이동 */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.skill-card h4 {
+  color: #fff; /* 기본 상태 제목 색상 */
+}
+
+.skill-card:hover h4 {
+  color: #000; /* 호버 시 제목 색상 */
+}
+
+.skill-card ul {
+  padding-left: 0;
+}
+
+.skill-card li {
+  color: #ccc; /* 기본 상태 목록 항목 색상 */
+  margin-bottom: 8px;
+}
+
+.skill-card:hover li {
+  color: #333; /* 호버 시 목록 항목 색상 */
+}
+
+/* 연락처 섹션 */
+#contact .container {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+}
+
+#contact h2 {
+  color: #fff;
+}
+
+#contact p.lead {
+  color: #ccc;
+}
+
+#contact ul li {
+  color: #ccc;
+}
+
+#contact a {
+  color: #ccc;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+#contact a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* 푸터 */
+footer {
+  background-color: #000 !important;
+  border-top: 1px solid #333;
+}
+
+footer p {
+  margin-bottom: 0;
+  color: #888;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  #home h1 {
+    font-size: 2.5rem;
+  }
+
+  #home .lead {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  .skill-card {
+    margin-bottom: 20px;
+  }
+}
