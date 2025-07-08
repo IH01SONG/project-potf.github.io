@@ -164,16 +164,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 4rem;
     position: relative;
     z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .hero-content {
     max-width: 600px;
+    text-align: center;
 }
 
 .hero-title {
@@ -217,6 +223,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .btn {
@@ -258,7 +265,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Floating Cards */
 .hero-image {
     position: relative;
-    height: 500px;
+    height: 400px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -756,9 +764,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .hero-container {
-        grid-template-columns: 1fr;
-        text-align: center;
         gap: 2rem;
+        padding: 0 1rem;
     }
 
     .hero-title {
