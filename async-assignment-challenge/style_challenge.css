@@ -1,0 +1,226 @@
+/* 추가적인 우주적 효과들 */
+
+/* 플로팅 우주선 애니메이션 */
+.container::after {
+    content: '🛸';
+    position: fixed;
+    top: 20%;
+    right: -50px;
+    font-size: 30px;
+    animation: floating-spaceship 15s linear infinite;
+    z-index: 0;
+    opacity: 0.7;
+}
+
+@keyframes floating-spaceship {
+    0% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+        right: -50px;
+    }
+    25% {
+        transform: translateX(-200px) translateY(-50px) rotate(-10deg);
+        right: 20%;
+    }
+    50% {
+        transform: translateX(-400px) translateY(50px) rotate(10deg);
+        right: 40%;
+    }
+    75% {
+        transform: translateX(-600px) translateY(-30px) rotate(-5deg);
+        right: 60%;
+    }
+    100% {
+        transform: translateX(-800px) translateY(0) rotate(0deg);
+        right: 100%;
+    }
+}
+
+/* 별똥별 효과 */
+@keyframes shooting-star {
+    0% {
+        transform: translateX(-100px) translateY(-100px);
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100vw) translateY(100vh);
+        opacity: 0;
+    }
+}
+
+body::after {
+    content: '⭐';
+    position: fixed;
+    top: 10%;
+    left: -20px;
+    font-size: 20px;
+    animation: shooting-star 8s linear infinite;
+    animation-delay: 2s;
+    z-index: 0;
+}
+
+/* 게시물 카드에 글로우 효과 추가 */
+.post {
+    position: relative;
+}
+
+.post::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57);
+    border-radius: 17px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.post:hover::after {
+    opacity: 0.3;
+}
+
+/* 입력 필드에 네온 효과 */
+.form-control:focus {
+    animation: neon-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes neon-glow {
+    from {
+        box-shadow: 0 0 20px rgba(78, 205, 196, 0.6);
+    }
+    to {
+        box-shadow: 0 0 30px rgba(78, 205, 196, 0.8), 0 0 40px rgba(78, 205, 196, 0.6);
+    }
+}
+
+/* 버튼 클릭 효과 */
+.btn-primary:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+}
+
+/* 에러 메시지에 추가 효과 */
+.error {
+    position: relative;
+    overflow: hidden;
+}
+
+.error::before {
+    content: '⚠️';
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    animation: error-slide 0.5s ease-out;
+}
+
+@keyframes error-slide {
+    from {
+        left: -30px;
+        opacity: 0;
+    }
+    to {
+        left: 10px;
+        opacity: 1;
+    }
+}
+
+/* 로딩 애니메이션 개선 */
+.loading {
+    position: relative;
+}
+
+.loading::before {
+    content: '🌟';
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    transform: translateX(-50%);
+    animation: loading-stars 1s ease-in-out infinite;
+}
+
+@keyframes loading-stars {
+    0%, 100% {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(-50%) scale(1.2);
+        opacity: 0.7;
+    }
+}
+
+/* 스크롤바 커스터마이징 */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #764ba2, #667eea);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .container {
+        margin-top: 20px;
+        padding: 0 15px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .btn-primary {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .post {
+        padding: 15px;
+    }
+}
+
+/* 접근성 개선 */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* 다크모드 대응 */
+@media (prefers-color-scheme: light) {
+    body {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+    }
+    
+    .form-control {
+        background: rgba(255, 255, 255, 0.9);
+        color: #333;
+    }
+    
+    .form-control::placeholder {
+        color: rgba(0, 0, 0, 0.6);
+    }
+}
