@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고급 계산기</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>고급 계산기</h1>
+        
+        <div class="calculator">
+            <div class="display-section">
+                <div id="display" class="display">0</div>
+                <div id="result" class="result">결과: 0</div>
+            </div>
+            
+            <div class="buttons">
+                <!-- 숫자 버튼 -->
+                <div class="row">
+                    <button onclick="clearCalculator()" class="btn clear">C</button>
+                    <button onclick="backspace()" class="btn operation">⌫</button>
+                    <button onclick="setOperator('√')" class="btn operation">√</button>
+                    <button onclick="setOperator('**')" class="btn operation">x²</button>
+                </div>
+                
+                <div class="row">
+                    <button onclick="appendNumber('7')" class="btn number">7</button>
+                    <button onclick="appendNumber('8')" class="btn number">8</button>
+                    <button onclick="appendNumber('9')" class="btn number">9</button>
+                    <button onclick="setOperator('/')" class="btn operation">÷</button>
+                </div>
+                
+                <div class="row">
+                    <button onclick="appendNumber('4')" class="btn number">4</button>
+                    <button onclick="appendNumber('5')" class="btn number">5</button>
+                    <button onclick="appendNumber('6')" class="btn number">6</button>
+                    <button onclick="setOperator('*')" class="btn operation">×</button>
+                </div>
+                
+                <div class="row">
+                    <button onclick="appendNumber('1')" class="btn number">1</button>
+                    <button onclick="appendNumber('2')" class="btn number">2</button>
+                    <button onclick="appendNumber('3')" class="btn number">3</button>
+                    <button onclick="setOperator('-')" class="btn operation">-</button>
+                </div>
+                
+                <div class="row">
+                    <button onclick="appendNumber('0')" class="btn number zero">0</button>
+                    <button onclick="appendDecimal()" class="btn number">.</button>
+                    <button onclick="setOperator('+')" class="btn operation">+</button>
+                </div>
+                
+                <div class="row">
+                    <button onclick="calculate()" class="btn equals">=</button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="history" class="history">
+            <h3>계산 기록:</h3>
+            <div id="history-list"></div>
+        </div>
+    </div>
+    
+    <script src="calculator.js"></script>
+</body>
+</html>
